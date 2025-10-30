@@ -1,0 +1,16 @@
+Year
+Month
+car-id
+car-type
+gate-name
+gateX
+gateY
+monthOrder
+gateType
+ - entrances: 1
+ - general gates: 2
+ - gates: 3
+ - ranger stops: 4
+ - camping: 5
+ - ranger base: 12
+gateTypeName

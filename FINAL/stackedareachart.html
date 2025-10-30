@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>COMP 152-02 - Lab 9</title>
+
+	<!-- Load Google Font -->
+	<link href='https://fonts.googleapis.com/css?family=Roboto:100,400,300,400italic,700' rel='stylesheet' type='text/css'>
+
+	<!-- CSS libraries -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+
+	<!-- Custom CSS code -->
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+	<div class="container-fluid">
+
+		<div class="row">
+			<div class="col-md-12">
+				
+				<h1>Traffic Patterns in the Leakagul Nature Preserve</h1>
+				<h2>Detailed monthly statistics on traffic levels by car type</h2>
+
+				<!-- Visualization placeholders -->
+				<div id="stacked-area-chart"></div>
+				<div id="timeline"></div>
+				<div id="filters" style="margin-top:10px">
+					<div class="dropdown">
+						<button class="dropbtn">Cars
+							<i class="caret"></i>
+						</button>
+						<div class="dropdown-content">
+							<button onclick="filterData('2 Axle Car');">2 Axle Car</a>
+							<button onclick="filterData('2 Axle Truck');">2 Axle Truck</a>
+							<button onclick="filterData('3 Axle Truck');">3 Axle Truck</a>
+							<button onclick="filterData('4 Axle Truck');">4 Axle Truck</a>
+							<button onclick="filterData('2 Axle Bus');">2 Axle Bus</a>
+							<button onclick="filterData('3 Axle Bus');">3 Axle Bus</a>
+							<button onclick="filterData('Ranger Vehicle');">2P</a>
+						</div>
+					</div>
+					<div id="Gates" style="margin-top:10px">						<label><input type="checkbox" class="checkboxGates" value="Entrances" checked> Entrances </label>
+						<label><input type="checkbox" class="checkboxGates" value="General Gates" checked> General Gates </label>
+						<label><input type="checkbox" class="checkboxGates" value="Gates" checked> Gates </label>
+						<label><input type="checkbox" class="checkboxGates" value="Ranger Stops" checked> Ranger Stops </label>
+						<label><input type="checkbox" class="checkboxGates" value="Camping" checked> Camping </label>
+						<input type="button" value="Reset Filters" onclick="resetViz()">
+				</div>
+				<h1>Representative Map of Traffic Patterns in the Park</h1>
+				<div id="bubble-plot"></div>
+			</div>
+		</div>
+
+	</div>
+
+	<!-- Load JS libraries -->
+	<script src="jquery.min.js"></script>
+	<script src="bootstrap.min.js"></script>
+	<script src="d3.js"></script>
+
+	<!-- Visualization objects -->
+	<script src="stackedAreaChart.js"></script>
+	<script src="timeline.js"></script>
+	<script src="bubblePlot.js"></script>
+
+	<!-- Load data, create visualizations -->
+	<script src="main.js"></script>
+</body>
+</html>
